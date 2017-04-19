@@ -1,3 +1,4 @@
-fatorial 0 = 1
-fatorial n = fatorial(n-1) * n
+factorial 0 = 1
+factorial n | (n > 0) = factorial(n-1) * n
+            | otherwise = 0
 
