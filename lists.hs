@@ -1,7 +1,8 @@
+-- Prints a list's size
 size [] = 0
 size (a:b) = 1 + size b
 
-
+------------------------------------------------------------------------------
 {- Finding if two given lists are equal. Being equal means:
  - Having the same size;
  - Having the same elements;
@@ -14,6 +15,7 @@ same _ [] = False
 same [] _ = False
 same (a:b) (c:d)  | (a == c) = same b d
                   | otherwise = False
+------------------------------------------------------------------------------
 
 
 my_reverse :: [t] -> [t]
@@ -34,15 +36,18 @@ myx (x:xs)  | (x > myx xs) = x
             | otherwise = myx xs
 
 
+-- Say if all elements inside a list are even
 evens :: [Int] -> Bool
 evens [] = True
 evens (x:xs)  | (mod x 2 == 1) = False
               | otherwise = evens xs
 
+-- Say if all elements inside a list are odd
 odds :: [Int] -> Bool
 odds [] = True
 odds (x:xs) | (mod x 2 == 0) = False
             | otherwise = odds xs
+
 
 ------------------------------------------------------------------------------
 -- List Comprehension
@@ -52,8 +57,9 @@ list_of_tuples = [ (x,y) | x <- [1..2], y <- [1..4]]
 
 
 ------------------------------------------------------------------------------
--- Sorting:
+-- Simple Sorting:
 ------------------------------------------------------------------------------
+
 -- 1st step, function that returns the minimum integer from a list of integers
 minimeu :: [Int] -> Int
 minimeu [x] = x
@@ -75,3 +81,6 @@ aux_sort sorted unordered = aux_sort (sorted ++ [ minimeu unordered ]) (remove_m
 -- The final function
 my_sort :: [Int] -> [Int]
 my_sort l = aux_sort [] l
+------------------------------------------------------------------------------
+-- /Sorting:
+------------------------------------------------------------------------------
