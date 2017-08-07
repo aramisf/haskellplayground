@@ -1,0 +1,5 @@
+Abstract Data Type(s)
+
+In this directory, I'll keep some files containing the basic idea behind
+Abstract Data Types which are nothing more than structured data types build
+using Haskell's primitive data types
