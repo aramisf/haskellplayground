@@ -1,6 +1,6 @@
 myWriter :: IO()
 myWriter = do
-            writeFile "written-file.txt" "Do you want to learn some Haskell?"
+            writeFile "written-file.txt" "Do you want to learn some Haskell?\n"
             putStrLn "Finished writing on file"
 
 myReader :: IO()
